@@ -1,0 +1,44 @@
+.featured-services{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+
+    .container{
+        justify-content: center;
+    }
+
+    h2{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .contain{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .service{
+        width: 24%;
+        text-align: center;
+        border:1px solid $lt-grey;
+        padding:2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 3px;
+
+        h3{
+            margin: .5rem auto;
+            width: 100%;
+        }
+        .red{
+            margin-top:1rem;
+            align-self: flex-end;
+        }
+    }
+}

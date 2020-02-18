@@ -1,0 +1,22 @@
+.react-tabs{
+    width: 100%;
+
+    .react-tabs__tab-list{
+        list-style-type: none;
+        display:flex;
+        justify-content: space-between;
+
+        li{
+            display: inline-block;
+            color:$grey;
+            flex:1;
+            text-align: center;
+            padding-bottom: .5rem;
+
+            &.react-tabs__tab--selected{
+                color:$red;
+                border-bottom:2px solid $red;
+            }
+        }
+    }
+}

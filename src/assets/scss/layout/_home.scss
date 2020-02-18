@@ -1,0 +1,99 @@
+.home{
+    .banner{
+        width: 100%;
+        background:url(../images/scuba-rescue-diver.jpg) no-repeat top center;
+        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        min-height: 80vh;
+
+        .container{
+            max-width: 1300px;
+
+            .copy{
+                max-width: 40%;
+                margin:80px 0 160px 0;
+
+                h1{
+                    width: 100%;
+                    color:$white;
+                    margin-bottom: 1.5rem;;
+
+                    span{
+                        color:$red;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .introtxt{
+                    color:$white;
+                }
+            }
+        }
+    }
+    .services{
+        background:$darker;
+
+        .container{
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .copy{
+            width: 35%;
+            margin-right: 15%;
+        }
+    }
+    .promise{
+        .container{
+            align-items: center;
+        }
+        .cody-arms{
+            margin-top:-4rem;   
+            position: relative;
+            z-index: 2;             
+            
+        }
+        .copy{
+            max-width: 50%;
+
+            p{
+                margin-bottom: 1rem;
+
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .testimonialCTA{
+        .container{
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            padding:6rem 0;
+
+            .copy{
+                width: 50%;
+
+                h2{
+                    width: 100%;
+                }
+                p{
+                    width: 100%;
+                }
+            }        
+        }
+    }
+    .image-carousel{
+        margin-bottom: 2rem;
+        img{
+            width:100%;
+        }
+        .slick-slide{
+            padding:0 1rem;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import url("https://use.typekit.net/svu1dnk.css");
+
+@font-face {
+    font-family: 'beyond_infinity_-_demoregular';
+    src: url('../fonts/beyond_infinity_-_demo_2-webfont.woff2') format('woff2'),
+         url('../fonts/beyond_infinity_-_demo_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+    font:16px/1.5 "Brandon Grotesque";
+    color:$dark;
+    letter-spacing: .3px;;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 1;
+}
+h2{
+    font-size: 40px;  
+    margin-bottom: 1rem; 
+
+    &.white{
+        color:$white;
+    }
+}
+h3{
+    font-size: 20px;
+    color: $red;
+}
+
+p{
+    &.white{
+        color:$white;
+    }
+
+    &.red{
+        color:$red;
+    }
+
+    &.introtxt{
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+
+/* Links */
+a{
+    text-decoration: none;
+    color:$dark;
+
+    &.red{
+        color: $red;
+    }
+}
+
+/* Other */
+.italic-red{
+    font:110px beyond_infinity_-_demoregular;
+    color:$red;
+    letter-spacing: 1.25px;
+    margin-bottom: -30px;
+}

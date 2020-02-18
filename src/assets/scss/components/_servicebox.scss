@@ -1,0 +1,45 @@
+.service-box{
+    width: 23%;
+    padding: 2rem 1.5rem;
+    background: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    margin: 1.5rem 1%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(3){
+        top: -6rem;
+    }
+    &:nth-child(4){
+        top: -7rem;
+    }
+    &:nth-child(5){
+        top: -1.5rem;
+    }
+    &:nth-child(6){
+        top: -7.5rem;
+    }
+
+    h3{
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .red{
+        margin-top:1rem;
+        font-weight: 700;
+    }
+
+    .demand{
+        background:$red;
+        color:$white;
+        padding:4px 1rem;
+        border-radius: 3px;
+        position: absolute;
+        top:-1rem;
+    }
+}

@@ -1,0 +1,52 @@
+footer{
+    background:$black;
+    color:$white;
+    padding:4rem 0;
+    background: $black url(../images/logo-california-bear.png) no-repeat 80% 110%;
+    background-size: 20%; 
+
+    .container{
+        align-items: end;
+    }
+
+    .copy{
+        width: 50%;
+        display: flex;
+        justify-items: baseline;
+        justify-content: baseline;
+        flex-wrap: wrap;
+
+        h2{
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    nav{
+        width: 50%;
+
+        .nav{
+            list-style-type: none;
+
+            li{
+                width: 24%;
+
+                a{
+                    color:$white;
+                }
+            }
+        }
+    }
+    .shield{
+        margin-right: 2rem;
+    }
+}
+
+.copyright{
+    padding:1.5rem 0;
+    
+    p{
+        text-align: right;
+        width:100%;
+    }
+}

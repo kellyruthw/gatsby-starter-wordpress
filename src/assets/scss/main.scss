@@ -1,0 +1,24 @@
+// Base.
+@import 'animate.css';
+@import 'base/_colors';
+@import 'base/_page';
+@import 'base/_typography';
+
+// Component.
+
+@import 'components/_images';
+@import 'components/_divider';
+@import 'components/_button';
+@import 'components/_servicebox';
+@import 'components/_carouselClients';
+@import 'components/_bannerIntro';
+@import 'components/_tabs';
+@import 'components/_featuredServices';
+
+// Layout.
+
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_home';
+@import 'layout/_services';
+@import 'layout/_singleService';
