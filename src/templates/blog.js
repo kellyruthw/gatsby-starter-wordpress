@@ -1,46 +1,65 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
 import Pagination from '../components/Pagination'
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { data, pageContext } = this.props
-    const { edges: posts } = data.allWordpressPost
+const Blog = (props) => {
 
-    return (
-      <Layout>
-        <PostList posts={posts} title="Latest posts" />
-        <Pagination pageContext={pageContext} pathPrefix="/" />
-      </Layout>
-    )
-  }
+  const posts = props.data.allWordpressPost
+
+return(
+  <Layout>
+    <section className="section">
+        <div className="container">
+          <div className="content">
+            <h1 className="has-text-weight-bold is-size-2">Blog</h1>
+          </div>
+          {props.data.allWordpressPost.edges.map((p) => (
+            <div className="content" key={p.node.wordpress_id} >
+              <p>
+                <a className="has-text-primary" href={p.node.slug}>
+                  {p.node.title}
+                  {p.node.categories.map(( cat ) => (
+                    <div className="category">
+                      <a href={cat.slug}>{cat.name}</a>
+                    </div>
+                  ))}
+                </a>
+              </p>
+              <div>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: p.node.excerpt,
+                  }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+  </Layout>
+  )
 }
 
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allWordpressPost: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-  pageContext: PropTypes.shape({
-    currentPage: PropTypes.number,
-    numPages: PropTypes.number,
-  }),
-}
+export default Blog
 
-export const pageQuery = graphql`
-  query IndexQuery($limit: Int!, $skip: Int!) {
-    allWordpressPost(
-      sort: { fields: date, order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
+export const blogQuery = graphql`
+  query BlogQuery{
+    allWordpressPost (filter: { status: { eq : "publish" } }) {
       edges {
         node {
-          ...PostListFields
+          title
+          date
+          wordpress_id
+          categories {
+            slug
+            name
+          }
+          featured_media {
+            source_url
+            alt_text
+          }
         }
       }
     }

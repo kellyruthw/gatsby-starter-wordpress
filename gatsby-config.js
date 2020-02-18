@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + WordPress Starter',
+    siteUrl: `https://www.setmedicla.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

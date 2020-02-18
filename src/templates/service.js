@@ -31,7 +31,7 @@ const Service = (props) => {
                     title="Request Rates"
                 /> 
                 <div className="all-productions">
-                    {pageData.acf.single_production.map((prod) => (
+                    {pageData.acf.production.map((prod) => (
                     <div className="production">
                         <h3>{prod.name}</h3>
                         <p>{prod.copy}</p>
@@ -51,20 +51,20 @@ const Service = (props) => {
         </div>
         <div className="kits">
             <div className="container">
-                <h2>{pageData.acf.kits_headline}</h2>
-                <p>{pageData.acf.kits_intro_text}</p>
+                <h2>Kits</h2>
+                <p>NEED</p>
                 <Tabs>
                     <TabList>
-                        {pageData.acf.kit.map((kit) => (
+                        {props.data.allWordpressWpKits.edges.map((kit) => (
                         <Tab>
-                            <h4>{kit.kit_name}</h4>
+                            <h4>{kit.node.kit_name}</h4>
                         </Tab>
                         ))}
                     </TabList>
-                    {pageData.acf.kit.map((kit) => (
+                    {props.data.allWordpressWpKits.edges.map((kit) => (
                         <TabPanel>
                             <div className="grid-5 main-info">
-                                <p>{kit.kit_copy}</p>
+                                <p>{kit.node.acf.kit_copy}</p>
                                 <div className="products">
                                     <h4>Products I Recommend</h4>
                                     <Button
@@ -72,7 +72,7 @@ const Service = (props) => {
                                         title="Buy this kit"
                                     />
                                     <div className="items">
-                                    {kit.kit_item.map((kititem) => (
+                                    {kit.node.acf.kit_item.map((kititem) => (
                                         <div className="item">
                                             <a href={kititem.link}>
                                                 <img src={kititem.image.source_url} alt={kititem.image.alt_text} />
@@ -83,7 +83,7 @@ const Service = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <img src={kit.kit_image.source_url} alt={kit.kit_image.alt_text} className="grid-6" />
+                            <img src={kit.node.acf.kit_image.source_url} alt={kit.node.acf.kit_image.alt_text} className="grid-6" />
                         </TabPanel>
                     ))}
                 </Tabs>
@@ -132,28 +132,36 @@ query singleServiceQuery($id: String!) {
           }
         }
       }
+      allWordpressWpKits {
+        edges {
+          node {
+            title
+            acf {
+            button_link {
+                title
+                url
+            }
+            kit_copy
+            kit_image {
+                alt_text
+                source_url
+            }
+            kit_item {
+                image {
+                alt_text
+                source_url
+                }
+                link
+                name
+            }
+            }
+          }
+        }
+      }
     wordpressWpServices(id: { eq: $id }) {
         wordpress_id
         title
-        acf {
-          kits_headline
-          kits_intro_text
-          kit {
-              kit_copy
-              kit_image {
-                alt_text
-                source_url
-              }
-              kit_name
-              kit_item {
-                link
-                name
-                image {
-                  alt_text
-                  source_url
-                }
-              }
-            }            
+        acf {         
           banner_image {
             alt_text
             source_url
@@ -162,7 +170,7 @@ query singleServiceQuery($id: String!) {
           button_name
           copy
           headline_2
-          single_production {
+          production {
             copy
             name
           }
