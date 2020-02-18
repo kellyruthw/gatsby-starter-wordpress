@@ -45,7 +45,7 @@ export default () => (
                     <li className="nav-item">
                       <a
                         className={prop.classes}
-                        href={prop.object_slug}
+                        href={`/${prop.object_slug}`}
                         alt={prop.title}
                       >
                         {prop.title}
@@ -58,7 +58,7 @@ export default () => (
                             return (
                               <a
                                 className="dropdown-item"
-                                href={`${child.object}/${child.object_slug}`}
+                                href={`/${child.object}/${child.object_slug}`}
                                 alt={child.title}
                               >
                                 {child.title}
