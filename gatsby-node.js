@@ -80,6 +80,7 @@ const certsTemplate = path.resolve(`./src/templates/certifications.js`)
 const aboutTemplate = path.resolve(`./src/templates/about.js`)
 const ratesTemplate = path.resolve(`./src/templates/rates.js`)
 const clientsTemplate = path.resolve(`./src/templates/clients.js`)
+const thanksTemplate = path.resolve(`./src/templates/thankyou.js`)
 
 exports.createPages = ({ graphql, actions }) => {
 
@@ -124,6 +125,8 @@ exports.createPages = ({ graphql, actions }) => {
                                     return slash(ratesTemplate);
                                   } else if (edge.node.wordpress_id === 13) {
                                     return slash(clientsTemplate);
+                                  } else if (edge.node.wordpress_id === 192) {
+                                    return slash(thanksTemplate);
                                 } 
                                   return slash(pageTemplate);
                               }

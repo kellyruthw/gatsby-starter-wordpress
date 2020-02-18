@@ -2,6 +2,17 @@
     background:url(../../assets/images/bg-los-angeles.jpg) no-repeat 50% 50%;
     background-size:cover;
 
+    &.thank-you{
+        .form .thanks{
+            display: block;
+            border-bottom:1px solid $lt-grey;
+            padding-bottom: 1rem;
+            margin-bottom: 2em;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
     .container{
         justify-content: center;
         flex-wrap: wrap;
@@ -17,6 +28,10 @@
         padding:2rem;
         width: 50%;
         margin:4rem 0;
+
+        .thanks{
+            display: none;
+        }
 
         h1{
             margin-bottom: 2rem;

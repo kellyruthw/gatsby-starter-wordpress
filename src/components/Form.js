@@ -30,6 +30,9 @@ const Form = ({headline, copy}) => {
 
   return(
     <div className="form">
+        <div className="thanks">
+            Thanks! We'll be in touch!
+        </div>
         <h1>{headline}</h1>
         <p className="intro-text">
             {copy}
