@@ -1,0 +1,35 @@
+.certifications{
+
+
+    .img-text{
+        position: relative;
+
+        .fancy-text{
+            position: absolute;
+            background: $white;
+            border: 1px solid $red;
+            padding: .5rem 1.5rem;
+            border-radius: 3px;
+            transform: rotate(-8deg);
+            left: -2rem;
+        }
+    } 
+    .cert-list{
+        ul{
+            list-style-type: none;
+
+            li{
+                margin-bottom: 2rem;
+
+                &:before{
+                    content:'+';
+                    color:$red;
+                    margin-right:1rem;
+                }
+            }
+        }
+    }
+    footer{
+        margin-top:4rem;
+    }
+}

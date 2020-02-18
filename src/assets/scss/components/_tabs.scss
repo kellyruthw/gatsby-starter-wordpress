@@ -1,22 +1,51 @@
 .react-tabs{
     width: 100%;
+    margin-bottom: 4rem;
 
     .react-tabs__tab-list{
         list-style-type: none;
         display:flex;
         justify-content: space-between;
+        margin-bottom: 2rem;
 
         li{
             display: inline-block;
-            color:$grey;
+            color:$lt-grey;
             flex:1;
             text-align: center;
             padding-bottom: .5rem;
+            border-bottom:2px solid $lt-grey;
+            transition: .2s all;
+
+            &:hover{
+                color:$red;
+                cursor: pointer;
+            }
 
             &.react-tabs__tab--selected{
                 color:$red;
                 border-bottom:2px solid $red;
             }
+        }
+    }
+    .react-tabs__tab-panel--selected{
+        min-height: 50vh;
+    }
+}
+
+.clients .react-tabs__tab-panel ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+    li{
+        width: 32%;
+        margin-bottom: 2rem;
+        
+        &:before{
+            content:'+';
+            color:$red;
+            margin-right:1rem;
         }
     }
 }

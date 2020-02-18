@@ -1,0 +1,27 @@
+.about{
+
+    header{
+        background:$white;
+    }
+
+    .content-area {
+        background:url(../../assets/images/bg-about.jpg) no-repeat 50% 50%;
+        background-size:cover;
+        min-height: 70vh;
+
+        .copy{
+            background:$white;
+            border-radius: 5px;
+            padding:2rem;
+            width: 50%;
+            margin:4rem 0;
+    
+            h1{
+                margin-bottom: 2rem;
+            }
+            p{
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

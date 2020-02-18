@@ -1,8 +1,12 @@
 .production-types{
+
     .container{
         align-items: center;
+        flex-wrap: wrap;
     }
-
+    h2{
+        width: 80%;
+    }
     .all-productions{
         width: 50%;
         margin-top:2rem;
@@ -37,6 +41,9 @@
 }
 
 .kits{
+    .container{
+        flex-wrap: wrap;
+    }
     h2{
         text-align: center;
         width: 100%;
@@ -94,4 +101,5 @@
             }
         }
     }
+
 }

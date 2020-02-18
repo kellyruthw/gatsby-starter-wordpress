@@ -13,8 +13,8 @@ const TopNav = props => {
                 Los Angeles County, CA
             </div>
             <div className="contact-info">
-                <span><a href="mailto:info@setmedicla.com">info@setmedicla.com</a></span>
                 <span><a href="tel:661-992-0517">661-992-0517</a></span>
+                <span><a href="mailto:info@setmedicla.com">info@setmedicla.com</a></span>
             </div>
         </div>
     )

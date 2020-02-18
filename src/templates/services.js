@@ -8,26 +8,31 @@ import BannerIntro from "../components/BannerIntro"
 
 const Services = (props) => {
 
-    const pageData = props.data.wordpressPage.acf.services
-    const serviceData = props.data.allWordpressWpServices
+    const serviceData = props.data.wordpressPage.acf.services
+    const seoData = props.data.wordpressPage.yoast_wpseo
+    const pageData = props.data.wordpressPage
 
   return(
-    <Layout extraClass="services">
+    <Layout extraClass="services" pageId={pageData.wordpress_id}>
+        <SEO
+            title={seoData.title}
+            description={seoData.metadesc}
+        />
        <BannerIntro 
-            image={pageData.banner_image.source_url}
-            alttxt={pageData.banner_image.alt_text}
-            headline={pageData.headline_1}
-            introtxt={pageData.intro_text}
+            image={serviceData.banner_image.source_url}
+            alttxt={serviceData.banner_image.alt_text}
+            headline={pageData.title}
+            introtxt={serviceData.intro_text}
         />    
         <div className="container">
             <div className="overview">
                 <div className="copy">
-                    <p>{pageData.copy}</p>
+                    <p>{serviceData.copy}</p>
                 </div>
-                <img src={pageData.right_image.source_url} alt={pageData.right_image.alt_text} />
+                <img src={serviceData.right_image.source_url} alt={serviceData.right_image.alt_text} />
             </div>
             <div className="all-services">
-                {serviceData.edges.map((pie) => (
+                {props.data.allWordpressWpServices.edges.map((pie) => (
                     <>
                       {pie.node.acf && (
                         <a href={`/services/${pie.node.slug}`} className="service">
@@ -42,7 +47,7 @@ const Services = (props) => {
             </div>
         </div>
         <div className="footer-image">
-            <img src={pageData.footer_image.source_url} alt={pageData.footer_image.alt_text} />
+            <img src={serviceData.footer_image.source_url} alt={serviceData.footer_image.alt_text} />
         </div>
         
     </Layout>
@@ -54,10 +59,12 @@ export default Services
 export const servicesQuery = graphql`
     query servicesQuery($id: String!) {
         wordpressPage(id: { eq: $id }) {
-            yoast_meta {
-              yoast_wpseo_title
-              yoast_wpseo_metadesc
+            yoast_wpseo {
+                title
+                metadesc
+                metakeywords
             }
+            title
             wordpress_id
             acf {
                 services {
@@ -66,7 +73,6 @@ export const servicesQuery = graphql`
                         alt_text
                     }
                     copy
-                    headline_1
                     intro_text
                     right_image {
                         source_url

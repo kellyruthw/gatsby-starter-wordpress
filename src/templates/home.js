@@ -22,13 +22,13 @@ import "slick-carousel/slick/slick-theme.css";
 const IndexPage = (props) => {
 
   const pageData = props.data.wordpressPage
-  const seoData = props.data.wordpressPage.yoast_meta
+  const seoData = props.data.wordpressPage.yoast_wpseo
 
   return(
     <Layout extraClass="home" pageId={pageData.wordpress_id}>
       <SEO
-        title={seoData.yoast_wpseo_title}
-        description={seoData.yoast_wpseo_metadesc}
+        title={seoData.title}
+        description={seoData.metadesc}
       />
       <div className="banner">
           <div className="container">
@@ -108,8 +108,8 @@ const IndexPage = (props) => {
                 <h2>No Job Too Big or Too Small</h2>
                 <p>Whether we’re filming on set in Hollywood or in Malibu in the water, safety always comes first with every client. Check out my past clients who feel confident and secure due to having a certified Los Angeles Set Medic on duty.</p>
                 <Button
-                    link="/clients#testimonials"
-                    title="Read Testimonials"
+                    link="/clients"
+                    title="View Clients"
                 />
               </div>
           </div>
@@ -126,9 +126,10 @@ export default IndexPage
 export const homeQuery = graphql`
     query homePageQuery($id: String!) {
         wordpressPage(id: { eq: $id }) {
-            yoast_meta {
-              yoast_wpseo_title
-              yoast_wpseo_metadesc
+            yoast_wpseo {
+                title
+                metadesc
+                metakeywords
             }
             wordpress_id
         }

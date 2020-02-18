@@ -3,24 +3,6 @@
     .container{
         flex-wrap: wrap;
     }
-    
-    .banner{
-        
-        img{
-            width: 100%;
-        }
-    }
-    .intro{
-        width: 70%;
-        background: $white;
-        margin-top: -6rem;
-        padding: 4rem;
-        border-radius: 3px;
-
-        h1{
-            margin-bottom: 1rem;
-        }
-    }
     .overview{
         width: 100%;
         display:flex;
@@ -51,10 +33,37 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        transition:.2s all;
 
         .service{
             width: 45%;
             padding:6rem 0;
+            position: relative;
+
+            &:after{
+                transition: all .2s;
+            }
+
+            h2{
+                transition: all .2s;
+            }
+
+            &:hover{
+                
+                :after{
+                    content:'';
+                    position: absolute;
+                    bottom:10px;
+                    left:0;
+                    height: 3px;
+                    width: 100%;
+                    border-bottom:3px solid $red;
+                }
+
+                h2{
+                    color:$red;
+                }
+            }
 
             p{
                 margin-bottom: 1rem;
