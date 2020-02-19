@@ -80,7 +80,7 @@ const certsTemplate = path.resolve(`./src/templates/certifications.js`)
 const aboutTemplate = path.resolve(`./src/templates/about.js`)
 const ratesTemplate = path.resolve(`./src/templates/rates.js`)
 const clientsTemplate = path.resolve(`./src/templates/clients.js`)
-const thanksTemplate = path.resolve(`./src/templates/thanks.js`)
+const thanksTemplate = path.resolve(`./src/templates/thank-you.js`)
 
 exports.createPages = ({ graphql, actions }) => {
 

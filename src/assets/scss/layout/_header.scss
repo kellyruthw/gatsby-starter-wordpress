@@ -49,6 +49,11 @@ header{
         .contact-info{
             a{
                 margin-left:2rem;
+                transition:all .2s;
+
+                &:hover{
+                    color:$red;
+                }
             }
         }
     }

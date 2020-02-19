@@ -5,9 +5,8 @@
     }
 
     .content-area {
-        background:url(../../assets/images/bg-about.jpg) no-repeat 50% 50%;
+        background:url(../../assets/images/bg-about.jpg) no-repeat 50% 0%;
         background-size:cover;
-        min-height: 70vh;
 
         .copy{
             background:$white;

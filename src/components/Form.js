@@ -33,7 +33,7 @@ export default function Contact() {
       <form
         name="contact"
         method="post"
-        action="/thanks/"
+        action="/thank-you/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
@@ -45,30 +45,12 @@ export default function Contact() {
             Don’t fill this out: <input name="bot-field" onChange={handleChange} />
           </label>
         </p>
-        <p>
-          <label>
-            Your name:
-            <br />
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your email:
-            <br />
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <br />
+            <input type="text" name="name" onChange={handleChange} placeholder="Name" />
+            <input type="email" name="email" onChange={handleChange} placeholder="Email" />
+            <input type="text" name="phone" onChange={handleChange} placeholder="Phone" />
+            <input type="text" name="production" onChange={handleChange} placeholder="Production Name" />
             <textarea name="message" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+          <button type="submit" className="btn red">Send</button>
       </form>
   )
 }

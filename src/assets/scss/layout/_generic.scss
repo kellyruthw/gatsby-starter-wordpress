@@ -1,0 +1,28 @@
+.generic{
+    .site-main{
+        
+        .container{
+            flex-wrap: wrap;
+            min-height: 50vh;
+            align-items: center;
+
+            .copy{
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                h1{
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+                p{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}

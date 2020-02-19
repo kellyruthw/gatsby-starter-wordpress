@@ -35,6 +35,17 @@ const IndexPage = (props) => {
     speed: 2000,
     autoplaySpeed: 8000,
     adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+    ]
   }
 
   return(
