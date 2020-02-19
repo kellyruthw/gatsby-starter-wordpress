@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 import ServiceBox from "../components/ServiceBox"
 import Button from "../components/Button"
 import CarouselClient from "../components/CarouselClients"
-import CarouselImages from "../components/CarouselImages"
+import Slider from "react-slick";
 
 import iconChair from "../assets/images/icon-event-medical-coordinator.svg"
 import iconDiver from "../assets/images/icon-scuba-rescue.svg"
@@ -23,6 +23,19 @@ const IndexPage = (props) => {
 
   const pageData = props.data.wordpressPage
   const seoData = props.data.wordpressPage.yoast_wpseo
+  const settings2 = {
+    dots: false,
+    centerMode: true,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 8000,
+    adaptiveHeight: true,
+  }
 
   return(
     <Layout extraClass="home" pageId={pageData.wordpress_id}>
@@ -115,7 +128,13 @@ const IndexPage = (props) => {
           </div>
       </div>
       <div className="image-carousel">
-        <CarouselImages />
+        <Slider {...settings2}>
+            {pageData.acf.carousel.map((photo) => (
+                <div>
+                    <img src={photo.image.source_url} alt={photo.image.alt_text} />
+                </div>
+            ))}        
+        </Slider>
       </div>
     </Layout>
   )
@@ -132,6 +151,14 @@ export const homeQuery = graphql`
                 metakeywords
             }
             wordpress_id
+            acf {
+                carousel {
+                  image {
+                    alt_text
+                    source_url
+                  }
+                }
+            }
         }
     }
 `

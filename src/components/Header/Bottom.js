@@ -1,22 +1,33 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 
 import Navbar from "./Navbar";
 
-import logo from "../../assets/images/logo-white.svg";
 import logoDark from "../../assets/images/logo-dark.svg";
 
-const BottomNav = props => {
-    return(
-        <div className="bottom">
-            <div className="logo">
-                <Link to="/">
-                <img src={logo} alt="logo" className="logo-white" />
-                <img src={logoDark} alt="logo" className="logo-dark" />
-                </Link>
+class BottomNav extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        isOpen: false
+      };
+    }
+
+    toggleMenu = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
+
+      render() {
+    
+        return (
+            <div className="bottom">
+                <div className="logo">
+                    <a href="/">
+                        <img src={logoDark} alt="logo" className="logo-dark" />
+                    </a>
+                </div>
+                <Navbar />
             </div>
-            <Navbar />
-        </div>
-    )
+        )
+    }
 }
 export default BottomNav

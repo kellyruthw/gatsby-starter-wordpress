@@ -33,3 +33,14 @@
         margin-top:4rem;
     }
 }
+@media screen and (max-width: 800px) {
+    .certifications {
+        .img-text .fancy-text{
+            left:-1rem;
+            font-size: 45px;
+        }
+        footer{
+            margin-top:2rem;
+        }
+    }
+}

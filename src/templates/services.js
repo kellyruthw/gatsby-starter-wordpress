@@ -39,7 +39,7 @@ const Services = (props) => {
                                 <img src={pie.node.acf.icon.source_url} alt={pie.node.acf.icon.alt_text} />
                                 <h2>{pie.node.title}</h2>
                                 <p>{pie.node.acf.blurb}</p>
-                                <p className="red">Learn More</p>
+                                <p className="red hover hover-1">Learn More</p>
                             </a>
                       )}
                     </>

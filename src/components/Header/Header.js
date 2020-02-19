@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 
 import Top from "./Top";
 import Bottom from "./Bottom";
@@ -37,22 +36,21 @@ class Header extends Component {
     return this.setState({ scrollPositionY });
   };
   render() {
-    const isScrolling = !!this.state.scrollPositionY;
+
     return (
       <header
         className={`${this.state.isOpen ? "menu-opened" : ""} ${
-          isScrolling ? "bgWhite" : "nav"
+          this.state.scrollPositionY >= 147 ? "sticky slide-down" : "nav"
         }`}
       >
         <div className="container">
           <Top />
-          <div className="burger-container" onClick={this.toggleMenu}>
-            <div id="burger">
-              <div className="bar topBar"></div>
-              <div className="bar btmBar"></div>
-            </div>
-          </div>
           <Bottom />
+          <div id="menu-icon" className={`${this.state.isOpen ? "open" : ""}`} onClick={this.toggleMenu}>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
         </div>
       </header>
     );

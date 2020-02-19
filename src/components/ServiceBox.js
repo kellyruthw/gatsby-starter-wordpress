@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 const ServiceBox = ({icon, title, copy, link, demand}) => {
 
   return(
-    <a href={link} className="service-box">
+    <a href={link} className="service-box hvr-bob">
         {demand && (
         <div className="demand">
             {demand}
@@ -15,7 +15,7 @@ const ServiceBox = ({icon, title, copy, link, demand}) => {
         <img src={icon} />
         <h3>{title}</h3>
         <p>{copy}</p>
-        <p className="red">Learn More</p>
+        <p className="red hover hover-1">Learn More</p>
     </a>
   )
 }

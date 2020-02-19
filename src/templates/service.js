@@ -57,14 +57,14 @@ const Service = (props) => {
         <Divider />
         <div className="featured-services">
             <div className="container">
-            <h2>Featured Service</h2>
+            <h2>Featured Services</h2>
             <div className="contain">
             {props.data.allWordpressWpServices.edges.map((pie2) => (
-                <a href={`/services/${pie2.node.slug}`} className="service">
+                <a href={`/services/${pie2.node.slug}`} className="service hvr-bob"> 
                     <img src={pie2.node.acf.icon.source_url} alt={pie2.node.acf.icon.alt_text} />
                     <h3>{pie2.node.title}</h3>
                     <p>{pie2.node.acf.small_blurb}</p>
-                    <p className="red">Learn More</p>
+                    <p className="red hover hover-1">Learn More</p>
                 </a>
             ))}
             </div>

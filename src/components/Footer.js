@@ -35,7 +35,6 @@ export default () => (
         <>
         <footer>
             <div className="container">
-                <img src={emsShield} className="shield" />
                 <div className="copy">
                     <h2>Available for Hire 24/7 in Greater Los Angeles County</h2>
                     <Button

@@ -9,7 +9,7 @@
             padding-bottom: 1rem;
             margin-bottom: 2em;
             width: 100%;
-            text-align: center;
+            text-align: ce;;
         }
     }
 
@@ -90,4 +90,24 @@
     footer{
         display: none;
     }
+}
+
+@media screen and (max-width: 800px) {
+    .rates{
+        header{
+            .container{
+                flex-wrap: nowrap;
+            }
+        }
+        .form{
+            width:100%;
+
+            form .btn{
+                width:100%;
+            }
+        }
+        .copyright p{
+            color:$white;
+        }
+    } 
 }

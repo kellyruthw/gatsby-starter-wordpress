@@ -22,3 +22,8 @@
         }
     }
 }
+@media screen and (max-width: 800px) {
+    .client-carousel .slick-slide img{
+        max-width:120px;
+    }
+}

@@ -1,7 +1,7 @@
 .home{
     .banner{
         width: 100%;
-        background:url(../images/scuba-rescue-diver.jpg) no-repeat top center;
+        background:$darker url(../images/scuba-rescue-diver.jpg) no-repeat top center;
         background-size: cover;
         display: flex;
         flex-wrap: wrap;
@@ -99,4 +99,37 @@
             padding:0 1rem;
         }
     }
+}
+
+@media screen and (max-width: 800px) {
+    .home {
+      .banner{
+          min-height: auto;
+          background-size: 100%;
+          .container{
+              .copy{
+                  max-width:100%;
+                  margin-bottom: 6rem;
+
+                  .italic-red{
+                      font-size: 80px;
+                  }
+              }
+          }
+      }
+    .services{
+        padding-bottom:4rem;
+
+        .copy{
+            width:100%;
+        }
+    }
+    .promise{
+        display: none;
+    }
+    .testimonialCTA .container .copy{
+        width:100%;
+        padding:0 1rem;
+    }
+  }
 }

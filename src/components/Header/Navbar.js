@@ -32,7 +32,7 @@ export default () => (
     render={data => {
       return (
         <nav className="menu">
-          <ul className="nav flex-column">
+          <ul className="nav">
             {data &&
               data.allWordpressWpApiMenusMenusItems &&
               data.allWordpressWpApiMenusMenusItems.edges &&

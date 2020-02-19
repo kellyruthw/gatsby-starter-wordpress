@@ -49,21 +49,45 @@
             }
 
             &:hover{
-                
-                :after{
-                    content:'';
-                    position: absolute;
-                    bottom:10px;
-                    left:0;
-                    height: 3px;
-                    width: 100%;
-                    border-bottom:3px solid $red;
-                }
 
                 h2{
                     color:$red;
                 }
             }
+
+            .hover {
+                transition: all 0.2s ease-in-out;;
+                position: relative;
+                &:before,
+                &:after {
+                  content: "";
+                  position: absolute;
+                  bottom: -10px;
+                  width: 0px;
+                  height: 5px;
+                  margin: 5px 0 0;
+                  transition: all 0.2s ease-in-out;;
+                  transition-duration: 0.25s;
+                  opacity: 0;
+                  background-color: $red;
+                }
+                &.hover-1 {
+                  &:before,
+                  &:after {
+                    left: 0;
+                  }
+                }
+              }
+              &:hover {
+                cursor: pointer;
+                .hover {
+                  &:before,
+                  &:after {
+                    width: 100%;
+                    opacity: 1;
+                  }
+                }
+              }
 
             p{
                 margin-bottom: 1rem;
@@ -82,3 +106,41 @@
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .services{
+        header{
+            .container{
+                flex-wrap: nowrap;
+            }
+        }
+        .copy{
+            
+            p{
+                margin-bottom: 3rem;
+            }
+        }
+        .overview{
+            flex-wrap: wrap;
+            img{
+                width: 100%;
+                margin:0;
+            }
+            .copy{
+                display: none;
+            }
+        }
+        .all-services{
+            width:100%;
+
+            .service{
+                width:100%;
+                text-align: center;
+                padding: 2rem 0;
+            }
+        }
+        footer .container{
+            flex-wrap: wrap;
+        }
+    }
+  }
