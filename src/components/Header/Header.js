@@ -21,6 +21,7 @@ class Header extends Component {
   }
   componentDidMount() {
     return window.addEventListener("scroll", debounce(this.handleScroll, 16));
+    
   }
   componentWillUnmount() {
     return window.removeEventListener(
@@ -30,7 +31,11 @@ class Header extends Component {
   }
   toggleMenu = () => {
     this.setState({ isOpen: !this.state.isOpen });
+    if(this.state.isOpen){
+      document.body.style.overflow = 'hidden';
+    } 
   };
+  
   handleScroll = () => {
     const scrollPositionY = +window.scrollY;
     return this.setState({ scrollPositionY });
