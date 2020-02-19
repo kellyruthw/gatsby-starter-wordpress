@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from 'gatsby-link'
 
 function encode(data) {
   return Object.keys(data)
@@ -6,7 +7,7 @@ function encode(data) {
     .join('&')
 }
 
-const Form = ({headline, copy}) => {
+export default function Contact() {
   const [state, setState] = React.useState({})
 
   const handleChange = (e) => {
@@ -28,25 +29,46 @@ const Form = ({headline, copy}) => {
       .catch((error) => alert(error))
   }
 
-  return(
-    <div className="form">
-        <div className="thanks">
-            Thanks! We'll be in touch!
-        </div>
-        <h1>{headline}</h1>
-        <p className="intro-text">
-            {copy}
+  return (
+      <form
+        name="contact"
+        method="post"
+        action="/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
+      >
+        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>
+            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+          </label>
         </p>
-        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} action="/thanks/">
-            <input type="text" placeholder="Name" onChange={handleChange }/>
-            <input type="email" placeholder="Email" onChange={handleChange} />
-            <input type="tel" placeholder="Phone" onChange={handleChange} />
-            <input type="text" placeholder="Production Name" onChange={handleChange} />
-            <textarea placeholder="Message" onChange={handleChange} />
-            <button type="submit" className="btn red">Send</button>
-        </form>
-    </div>
+        <p>
+          <label>
+            Your name:
+            <br />
+            <input type="text" name="name" onChange={handleChange} />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your email:
+            <br />
+            <input type="email" name="email" onChange={handleChange} />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message:
+            <br />
+            <textarea name="message" onChange={handleChange} />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
   )
 }
-
-export default Form

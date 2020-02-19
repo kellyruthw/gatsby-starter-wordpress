@@ -18,15 +18,7 @@ const ThankYou = (props) => {
             description={seoData.metadesc}
         />
         <div className="container">
-            <Form
-                headline="Get in Touch"
-                copy={pageData.acf.rates.copy}
-            />
-            <div className="sub-message">
-                <h4>{pageData.acf.rates.submessage.headline}</h4>
-                <span><a href={`tel:${pageData.acf.rates.submessage.phone_number}`}>{pageData.acf.rates.submessage.phone_number}</a></span>
-                <span><a href={`mailto:${pageData.acf.rates.submessage.email_address}`}>{pageData.acf.rates.submessage.email_address}</a></span>
-            </div>
+           <h1>Thanks!</h1>
         </div>
         
     </Layout>

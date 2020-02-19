@@ -18,10 +18,16 @@ const RatesPage = (props) => {
             description={seoData.metadesc}
         />
         <div className="container">
-            <Form
-                headline="Get in Touch"
-                copy={pageData.acf.rates.copy}
-            />
+            <div className="form">
+                <div className="thanks">
+                    Thanks! We'll be in touch!
+                </div>
+                <h1>Let's Work Together</h1>
+                <p className="intro-text">
+                    {pageData.acf.rates.copy}
+                </p>
+                <Form />
+            </div>
             <div className="sub-message">
                 <h4>{pageData.acf.rates.submessage.headline}</h4>
                 <span><a href={`tel:${pageData.acf.rates.submessage.phone_number}`}>{pageData.acf.rates.submessage.phone_number}</a></span>
