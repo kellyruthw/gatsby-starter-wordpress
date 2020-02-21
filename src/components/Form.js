@@ -49,7 +49,7 @@ export default function Contact() {
             <input type="email" name="email" onChange={handleChange} placeholder="Email" />
             <input type="text" name="phone" onChange={handleChange} placeholder="Phone" />
             <input type="text" name="production" onChange={handleChange} placeholder="Production Name" />
-            <textarea name="message" onChange={handleChange} />
+            <textarea name="message" onChange={handleChange} placeholder="Message" />
           <button type="submit" className="btn red">Send</button>
       </form>
   )

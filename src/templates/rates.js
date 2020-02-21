@@ -19,9 +19,6 @@ const RatesPage = (props) => {
         />
         <div className="container">
             <div className="form">
-                <div className="thanks">
-                    Thanks! We'll be in touch!
-                </div>
                 <h1>Let's Work Together</h1>
                 <p className="intro-text" dangerouslySetInnerHTML={{ __html: pageData.content}} />
                 <Form />
@@ -50,13 +47,6 @@ export const ratesQuery = graphql`
             wordpress_id
             title
             content
-            acf {
-                submessage {
-                    email_address
-                    headline
-                    phone_number
-                  }
-              }
         }
     }
 `
