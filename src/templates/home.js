@@ -8,6 +8,7 @@ import ServiceBox from "../components/ServiceBox"
 import Button from "../components/Button"
 import CarouselClient from "../components/CarouselClients"
 import Slider from "react-slick";
+import LazyLoad from 'react-lazyload';
 
 import iconChair from "../assets/images/icon-event-medical-coordinator.svg"
 import iconDiver from "../assets/images/icon-scuba-rescue.svg"
@@ -115,7 +116,7 @@ const IndexPage = (props) => {
       </div>
       <div className="promise">
           <div className="container">
-            <img src={codyFoldedArms} className="cody-arms" alt="Cody Vlach as a Paramedic" />   
+            <LazyLoad><img src={codyFoldedArms} className="cody-arms" alt="Cody Vlach as a Paramedic" /></LazyLoad>
             <div className="copy">
                 <h2>My Paramedic Promise</h2>
                 <p>With years of experience working EMS as a certified medic, I’m Cody Vlach, and I’m here to assist you with your safety needs on set. I guarantee that my crew and I will not only provide medical solutions, but also give undivided compassion and respect to every patient that we treat. My crew is rated as some of the top set medics in Los Angeles County, and we’re known for having excellent work ethics, engaging personalities, and medical mindsets.</p>
@@ -148,7 +149,7 @@ const IndexPage = (props) => {
         <Slider {...settings2}>
             {pageData.acf.carousel.map((photo) => (
                 <div>
-                    <img src={photo.image.source_url} alt={photo.image.alt_text} />
+                    <LazyLoad><img src={photo.image.source_url} alt={photo.image.alt_text} /></LazyLoad>
                 </div>
             ))}        
         </Slider>
