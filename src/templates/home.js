@@ -24,15 +24,15 @@ const IndexPage = (props) => {
   const pageData = props.data.wordpressPage
   const seoData = props.data.wordpressPage.yoast_wpseo
   const settings2 = {
-    dots: false,
+    dots: true,
     centerMode: true,
     infinite: true,
-    arrows: false,
+    arrows: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 1000,
     autoplaySpeed: 8000,
     adaptiveHeight: true,
     responsive: [
@@ -42,7 +42,8 @@ const IndexPage = (props) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: false
+          dots: false,
+          arrows:false
         }
       },
     ]
@@ -82,7 +83,7 @@ const IndexPage = (props) => {
             />
             <ServiceBox
                 demand="High Demand"
-                link="/services/scuba-rescue-diver"
+                link="/services/scuba-rescue-safety-diver/"
                 icon={iconDiver}
                 title="Scuba Rescue Diver"
                 copy="Our PADI-certified scuba rescue divers take charge under water to monitor safety and prevent problems for all participants."

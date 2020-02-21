@@ -54,7 +54,7 @@
                 border:1px solid $lt-grey;
                 border-radius: 3px;
                 font-size: 16px;
-                font-family: Brandon Grotesque;
+                font-family: brandon-grotesque, Brandon Grotesque, Lato, Helvetica, sans-serif;
                 margin-bottom: 1rem;
             }
             textarea{
@@ -62,7 +62,7 @@
             }
             .btn{
                 border:0;
-                font:16px/1.5 brandon-grotesque, sans-serif;;
+                font:16px/1.5 brandon-grotesque, Brandon Grotesque, Lato, Helvetica, sans-serif;
                 width: 140px;
                 margin-top:2rem;
 

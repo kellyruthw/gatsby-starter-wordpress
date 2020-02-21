@@ -44,26 +44,18 @@ export default () => (
                 </div>
                 <nav className="menu">
                     <ul className="nav">
-                        {data &&
-                        data.allWordpressWpApiMenusMenusItems &&
-                        data.allWordpressWpApiMenusMenusItems.edges &&
-                        data.allWordpressWpApiMenusMenusItems.edges[0] &&
-                        data.allWordpressWpApiMenusMenusItems.edges[0].node &&
-                        data.allWordpressWpApiMenusMenusItems.edges[0].node.items &&
-                        data.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
-                            prop => {
-                            return (
-                                <li className="nav-item">
-                                <a
-                                    href={prop.url}
-                                    alt={prop.title}
-                                >
-                                    {prop.title}
-                                </a>
-                                </li>
-                            )
-                            }
-                        )}
+                      <li className="nav-item">Los Angeles</li>
+                      <li className="nav-item">Santa Monica</li>
+                      <li className="nav-item">Long Beach</li>
+                      <li className="nav-item">Malibu</li>
+                      <li className="nav-item">Downtown LA</li>
+                      <li className="nav-item">Valencia</li>
+                      <li className="nav-item">Hollywood</li>
+                      <li className="nav-item">Antelope Valley</li>
+                      <li className="nav-item">San Diego</li>
+                      <li className="nav-item">Marina Del Rey</li>
+                      <li className="nav-item">Culver City</li>
+                      <li className="nav-item">& More</li>
                     </ul>
                 </nav>
             </div>

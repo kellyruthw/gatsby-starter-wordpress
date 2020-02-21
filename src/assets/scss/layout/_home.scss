@@ -98,6 +98,27 @@
         .slick-slide{
             padding:0 1rem;
         }
+        .slick-arrow{
+            background: url('../images/icon-rt-arrow-circle.svg') no-repeat 50% 50%;
+            background-size: 100%;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(180deg);
+            width: 60px;
+            height:60px;
+            left: 30px;
+
+            &.slick-next{
+                transform: rotate(0);
+                left:auto;
+                right:30px;
+            }
+        }
+        .slick-next:before{
+            content: '';
+        }
+        [dir='rtl'] .slick-next:before{
+            content: '';
+        }
     }
 }
 

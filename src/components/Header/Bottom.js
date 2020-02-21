@@ -12,10 +12,6 @@ class BottomNav extends Component {
       };
     }
 
-    toggleMenu = () => {
-        this.setState({ isOpen: !this.state.isOpen });
-    }
-
       render() {
     
         return (

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-
 import Top from "./Top";
 import Bottom from "./Bottom";
-
 const debounce = (func, wait) => {
   let timeout;
   return (...args) => {
@@ -10,7 +8,6 @@ const debounce = (func, wait) => {
     timeout = setTimeout(() => func.apply(this, args), wait);
   };
 };
-
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +18,6 @@ class Header extends Component {
   }
   componentDidMount() {
     return window.addEventListener("scroll", debounce(this.handleScroll, 16));
-    
   }
   componentWillUnmount() {
     return window.removeEventListener(
@@ -30,18 +26,15 @@ class Header extends Component {
     );
   }
   toggleMenu = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-    if(this.state.isOpen){
-      document.body.style.overflow = 'hidden';
-    } 
+    this.setState({ isOpen: !this.state.isOpen }, () => {
+      document.body.style.overflow = this.state.isOpen ? 'hidden' : 'scroll';
+    });
   };
-  
   handleScroll = () => {
     const scrollPositionY = +window.scrollY;
     return this.setState({ scrollPositionY });
   };
   render() {
-
     return (
       <header
         className={`${this.state.isOpen ? "menu-opened" : ""} ${
@@ -61,5 +54,4 @@ class Header extends Component {
     );
   }
 }
-
 export default Header

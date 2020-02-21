@@ -5,7 +5,7 @@ import Footer from './Footer'
 import '../assets/scss/main.scss'
 
 const Layout = ({ children, pageId, extraClass }) => (
-  <div id="page" className={`${extraClass} site page-id-${pageId}`}>
+  <div id="page" className={`${extraClass} site page-id-${pageId}`} >
     <Header />
     <div id="content" className="site-content">
       <section id="primary" className="content-area">

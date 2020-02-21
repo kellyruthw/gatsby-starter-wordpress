@@ -9,23 +9,28 @@ import logoShameless from "../assets/images/logo-shameless.png"
  
 class Carousel extends React.Component {
   render() {
-    var settings = {
+  
+    const settings = {
       dots: false,
+      centerMode: true,
       infinite: true,
       arrows: false,
-      autoPlay: true,
-      speed: 500,
+      speed: 1000,
       slidesToShow: 5,
       slidesToScroll: 1,
+      autoplay: true,
+      speed: 1000,
+      autoplaySpeed: 2000,
+      adaptiveHeight: false,
       responsive: [
         {
-          breakpoint: 900,
+          breakpoint: 600,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
             infinite: true,
             dots: false,
-            autoPlay: true,
+            arrows:false
           }
         },
       ]

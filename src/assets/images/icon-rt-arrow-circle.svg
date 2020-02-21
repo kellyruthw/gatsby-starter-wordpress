@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(1.000000, 1.000000)">
+            <circle id="Oval" stroke="#232428" fill-opacity="0.8" fill="#FFFFFF" cx="41" cy="41" r="41"></circle>
+            <path d="M55.6655484,40.8529411 L33.2139355,25.1382741 C32.9762581,24.9724844 32.668129,24.9551983 32.4141935,25.0895587 C32.1594839,25.2254906 32,25.4926399 32,25.7849327 L32,57.2142667 C32,57.5065595 32.1594839,57.7744945 32.4141935,57.9104264 C32.5272258,57.9701421 32.6510968,58 32.7741935,58 C32.9282581,58 33.0815484,57.952856 33.2139355,57.8609252 L55.6655484,42.1462582 C55.8753548,41.9993261 56,41.7581059 56,41.4995997 C56,41.2410934 55.8745806,40.9998733 55.6655484,40.8529411 Z" id="Path" fill="#232428" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

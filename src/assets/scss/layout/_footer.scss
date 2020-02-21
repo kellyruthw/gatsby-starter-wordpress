@@ -27,6 +27,9 @@ footer{
 
         .nav{
             list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
 
             li{
                 width: 24%;
@@ -73,5 +76,26 @@ footer{
     }
     .copyright p{
         text-align: center;
+    }
+}
+@media screen and (max-width: 800px) {
+    footer nav .nav {
+        justify-content: center;
+        
+        li{
+            width: auto;
+            margin:.5rem;
+
+            &:after{
+                content:'•';
+                width:5px;
+                height: 5px;
+                margin-left:.5rem;
+            }
+
+            &:last-of-type:after{
+                content:'';
+            }
+        }
     }
 }
