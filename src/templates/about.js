@@ -20,7 +20,7 @@ const AboutPage = (props) => {
         <div className="copy">        
             <h1>{pageData.title}</h1>
             <p
-            dangerouslySetInnerHTML={{ __html: pageData.acf.about_copy}}
+            dangerouslySetInnerHTML={{ __html: pageData.content}}
             />
             </div> 
         </div>
@@ -40,9 +40,7 @@ export const aboutQuery = graphql`
             }
             wordpress_id
             title
-            acf {
-                about_copy
-            }
+            content
         }
     }
 `

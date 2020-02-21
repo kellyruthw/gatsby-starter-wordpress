@@ -2,7 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Button from "../components/Button"
-import emsShield from '../assets/images/ems-shield.svg'
 
 export default () => (
   <StaticQuery

@@ -1590,17 +1590,17 @@
   }
 }
 
-@keyframes fadeInUp {
+@-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -1612,14 +1612,14 @@
 @-webkit-keyframes fadeInUpBig {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 2000px, 0);
-    transform: translate3d(0, 2000px, 0);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -3735,3 +3735,53 @@
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
+
+
+.animated-2{
+  opacity: 0;
+    -webkit-transform: translateY(50px);
+    -o-transform: translateY(50px);
+    transform: translateY(50px);
+}
+
+.small-fade-up{
+  -webkit-transition: all 1.5s cubic-bezier(.35,1,.45,1) .5s;
+    -o-transition: all 1.5s cubic-bezier(.35,1,.45,1) .5s;
+    transition: all 1.5s cubic-bezier(.35,1,.45,1) .5s;
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+@keyframes smallFadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -o-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  to {
+    -webkit-transition: all 1.5s cubic-bezier(.35,1,.45,1) .5s;
+    -o-transition: all 1.5s cubic-bezier(.35,1,.45,1) .5s;
+    transition: all 1.5s cubic-bezier(.35,1,.45,1) .5s;
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.smallFadeInUp {
+  -webkit-animation-name: smallFadeInUp;
+  animation-name: smallFadeInUp;
+}
+
+
+.smallFadeInUp.delay1 { transition-delay: 0.4s; }
+
+.smallFadeInUp.delay2 { transition-delay: 0.8s; }
+
+.smallFadeInUp.delay3 { transition-delay: 1.2s; }
