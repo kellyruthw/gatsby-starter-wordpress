@@ -8,12 +8,10 @@ import Button from "../components/Button"
 import BannerIntro from "../components/BannerIntro"
 import Divider from "../components/Divider"
 
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-
 const Service = (props) => {
 
     const pageData = props.data.wordpressWpServices
-    const seoData = props.data.wordpressPage.yoast_wpseo
+    const seoData = props.data.wordpressWpServices.yoast_wpseo
 
   return(
     <Layout extraClass="service">
@@ -82,12 +80,6 @@ export default Service
 
 export const singleServiceQuery = graphql`
 query singleServiceQuery($id: String!) {
-    wordpressPage{ 
-        yoast_wpseo {
-            title
-            metadesc
-        }
-    }
     allWordpressWpServices(limit: 4) {
         edges {
           node {
@@ -150,6 +142,10 @@ query singleServiceQuery($id: String!) {
             source_url
           }
         }
+        yoast_wpseo {
+          title
+          metadesc
+      }
     }
 }
 `

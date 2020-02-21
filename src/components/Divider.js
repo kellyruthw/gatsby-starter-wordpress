@@ -7,7 +7,7 @@ const Divider = () => {
   return(
     <div className="container">
         <div className="divider">
-            <img src={divider} />
+            <img src={divider} alt="Divider with Logo"/>
         </div>
     </div>
   )
