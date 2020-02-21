@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-const AboutPage = (props) => {
+const AboutUsPage = (props) => {
 
   const pageData = props.data.wordpressPage
   const seoData = props.data.wordpressPage.yoast_wpseo
@@ -28,10 +28,10 @@ const AboutPage = (props) => {
   )
 }
 
-export default AboutPage
+export default AboutUsPage
 
-export const aboutQuery = graphql`
-    query aboutpageQuery($id: String!) {
+export const aboutUsQuery = graphql`
+    query aboutuspageQuery($id: String!) {
         wordpressPage(id: { eq: $id }) { 
             yoast_wpseo {
                 title
