@@ -9,7 +9,7 @@ const AboutPage = (props) => {
 
   const pageData = props.data.wordpressPage
   const seoData = props.data.wordpressPage.yoast_wpseo
-
+  console.log("test" + pageData)
   return(
     <Layout extraClass="about" pageId={pageData.wordpress_id}>
       <SEO
@@ -19,9 +19,7 @@ const AboutPage = (props) => {
       <div className="container">
         <div className="copy">        
             <h1>{pageData.title}</h1>
-            <p
-            dangerouslySetInnerHTML={{ __html: pageData.content}}
-            />
+            <p>test</p>
             </div> 
         </div>
     </Layout>
