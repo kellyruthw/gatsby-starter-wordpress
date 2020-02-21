@@ -33,7 +33,7 @@ const IndexPage = (props) => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 1000,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 6000,
     adaptiveHeight: true,
     responsive: [
       {
@@ -59,8 +59,8 @@ const IndexPage = (props) => {
           <div className="container">
               <div className="copy">
                 <h1><span className="italic-red">los angeles</span>Set Medic &<br />Water Rescue Diver</h1>
-                <p className="introtxt">Los Angeles Set Medic Providing life support and safety supervision
-    for the entertainment industry in Los Angeles</p>
+                <p className="introtxt">Set Medic Providing life support and safety supervision
+    for the entertainment industry in Los Angeles and beyond.</p>
                 <Button
                     link="/request-rates"
                     title="Request Rates"
@@ -85,7 +85,7 @@ const IndexPage = (props) => {
                 demand="High Demand"
                 link="/services/scuba-rescue-safety-diver/"
                 icon={iconDiver}
-                title="Scuba Rescue Diver"
+                title="Scuba Rescue Safety Diver"
                 copy="Our PADI-certified scuba rescue divers take charge under water to monitor safety and prevent problems for all participants."
             />
             <ServiceBox
@@ -113,7 +113,7 @@ const IndexPage = (props) => {
             <img src={codyFoldedArms} className="cody-arms" />   
             <div className="copy">
                 <h2>My Paramedic Promise</h2>
-                <p>With years of experience working EMS as a certified medic, I’m Cody Vlach, and I’m here to assist you with your safety needs on set. I guarantee that my crew and I will not only provide medical solutions, but also give undivided compassion and respect to every patient that we treat. My crew is rated as top set medics in Los Angeles County, and we’re known for having excellent work ethics, engaging personalities, and medical mindsets.</p>
+                <p>With years of experience working EMS as a certified medic, I’m Cody Vlach, and I’m here to assist you with your safety needs on set. I guarantee that my crew and I will not only provide medical solutions, but also give undivided compassion and respect to every patient that we treat. My crew is rated as some of the top set medics in Los Angeles County, and we’re known for having excellent work ethics, engaging personalities, and medical mindsets.</p>
                 <p>We care about your crew, and we’re prepared for every possible outcome.</p>
                 <Button
                     link="/certifications"
@@ -131,7 +131,7 @@ const IndexPage = (props) => {
           <div className="container">
               <div className="copy">
                 <h2>No Job Too Big or Too Small</h2>
-                <p>Whether we’re filming on set in Hollywood or in Malibu in the water, safety always comes first with every client. Check out my past clients who feel confident and secure due to having a certified Los Angeles Set Medic on duty.</p>
+                <p>Whether we’re filming on a busy location in Hollywood or in the chilly Malibu waters, safety always comes first with every client. Check out my past clients who feel confident and secure due to having a certified Los Angeles Set Medic on duty.</p>
                 <Button
                     link="/clients"
                     title="View Clients"

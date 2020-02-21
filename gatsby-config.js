@@ -5,6 +5,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about/`, `/services/*`, `/`, `/request-rates/`, `/clients/`, `/certifications/`],
+      },
+    },
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-sass',
     {

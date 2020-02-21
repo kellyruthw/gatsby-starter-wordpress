@@ -106,12 +106,16 @@
             width: 60px;
             height:60px;
             left: 30px;
+            z-index: 9;
 
             &.slick-next{
                 transform: rotate(0);
                 left:auto;
                 right:30px;
             }
+        }
+        .slick-prev:before{
+            content: '';
         }
         .slick-next:before{
             content: '';
