@@ -78,6 +78,7 @@ const IndexPage = (props) => {
                 demand="High Demand"
                 link="/services/set-medic"
                 icon={iconMedic}
+                alt_text={"Icon for Set Medic"}
                 title="Union Set Medic"
                 copy="Our cerdified paramedics can provide first aid & emergency medical assistance for your entire cast & crew"
             />
@@ -85,24 +86,28 @@ const IndexPage = (props) => {
                 demand="High Demand"
                 link="/services/scuba-rescue-safety-diver/"
                 icon={iconDiver}
+                alt_text={"Icon for Scuba Rescue Diver"}
                 title="Scuba Rescue Safety Diver"
                 copy="Our PADI-certified scuba rescue divers take charge under water to monitor safety and prevent problems for all participants."
             />
             <ServiceBox
                 link="/services/event-medical-coordinator"
                 icon={iconChair}
+                alt_text={"Icon for Event Medical Coordinator"}
                 title="Event Medical Coordinator"
                 copy="We manage medical resource requests that meet Los Angeles County requirements for large and small events."
             />
             <ServiceBox
                 link="/services/lifeguard"
                 icon={iconLifeguard}
+                alt_text={"Icon for Lifeguard"}
                 title="Lifeguard"
                 copy="Our top-notch lifeguards allow your production to film efficiently and ensure your pool or ocean safety needs."
             />
             <ServiceBox
                 link="/services/safety-supervisor"
                 icon={iconSafety}
+                alt_text={"Icon for Safety Supervisor"}
                 title="Safety Supervisor"
                 copy="Our set Safety Supervisors manage crew safety and comply with OSHA health standards for the job site risks."
             />
@@ -110,7 +115,7 @@ const IndexPage = (props) => {
       </div>
       <div className="promise">
           <div className="container">
-            <img src={codyFoldedArms} className="cody-arms" />   
+            <img src={codyFoldedArms} className="cody-arms" alt="Cody Vlach as a Paramedic" />   
             <div className="copy">
                 <h2>My Paramedic Promise</h2>
                 <p>With years of experience working EMS as a certified medic, I’m Cody Vlach, and I’m here to assist you with your safety needs on set. I guarantee that my crew and I will not only provide medical solutions, but also give undivided compassion and respect to every patient that we treat. My crew is rated as some of the top set medics in Los Angeles County, and we’re known for having excellent work ethics, engaging personalities, and medical mindsets.</p>
