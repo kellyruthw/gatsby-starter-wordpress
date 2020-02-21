@@ -12,6 +12,34 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-87306696-1",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 333892,
+        sv: 6
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-NG34ZLG",
+  
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+  
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-wordpress',

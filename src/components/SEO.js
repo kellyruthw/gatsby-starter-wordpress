@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import favicon from '../assets/images/favicon.png'
+import ogImage from '../assets/images/og-image.jpg'
 
 const SEO = ({ description, lang, meta, title, metaKeywords, thumbnail }) => {
   
@@ -50,7 +51,7 @@ const SEO = ({ description, lang, meta, title, metaKeywords, thumbnail }) => {
         },
         {
           property: `og:image`,
-          content: thumbnail,
+          content: `${ogImage}`,
         },
       ].concat(meta)}
     />
