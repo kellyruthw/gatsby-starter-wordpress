@@ -252,6 +252,15 @@ header{
                     li{
                         width:100%;
 
+                        &:last-of-type{
+                            position:fixed;
+                            bottom:0;
+
+                            a{
+                                padding:1rem;
+                            }
+                        }
+
                         a{
                             margin-left:0;
                             padding:.5rem;
@@ -276,15 +285,6 @@ header{
                             width: 100%;
                             margin:0;
                             padding:0;
-
-                            li:last-of-type{
-                                position:fixed;
-                                bottom:0;
-
-                                a{
-                                    padding:1rem;
-                                }
-                            }
 
                             a{
                                 padding-left:3rem;
