@@ -38,11 +38,11 @@ class Carousel extends React.Component {
 
     return (
       <Slider {...settings}>
-        <div><img src={logoApple} /></div>
-        <div><img src={logoRupaul} /></div>
-        <div><img src={logoViacom} /></div>
-        <div><img src={logoNike} /></div>
-        <div><img src={logoShameless} /></div>
+        <div><img src={logoApple} alt="Apple Logo" /></div>
+        <div><img src={logoRupaul} alt="Rupaul's Drag Race Logo" /></div>
+        <div><img src={logoViacom} alt="Viacom Logo" /></div>
+        <div><img src={logoNike} alt="Nike Logo" /></div>
+        <div><img src={logoShameless} alt="Shameless Logo" /></div>
       </Slider>
     );
   }

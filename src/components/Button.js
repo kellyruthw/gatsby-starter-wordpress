@@ -8,7 +8,7 @@ const Button = ({title, link, animation, delay}) => {
   return(
     <a href={link} className={`${animation} btn animated red ${delay}`} >
         {title}
-        <img src={rightArrow} />
+        <img src={rightArrow} alt="Icon of Right Arrow"/>
     </a>
   )
 }

@@ -1,10 +1,12 @@
 @font-face {
     font-family: 'beyond_infinity_-_demoregular';
     src: url('../fonts/beyond_infinity_-_demo_2-webfont.woff2') format('woff2'),
-         url('../fonts/beyond_infinity_-_demo_2-webfont.woff') format('woff');
+         url('../fonts/beyond_infinity_-_demo_2-webfont.woff') format('woff'),
+         local('Beyond Infinity - Demo 2'), 
+         local('Beyond Infinity - Demo 2');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap
 }
 
 body{
