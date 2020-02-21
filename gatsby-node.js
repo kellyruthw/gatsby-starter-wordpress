@@ -77,7 +77,7 @@ const postTemplate = path.resolve(`./src/templates/post.js`)
 const blogTemplate = path.resolve(`./src/templates/blog.js`)
 const categoryTemplate = path.resolve(`./src/templates/category.js`)
 const certsTemplate = path.resolve(`./src/templates/certifications.js`)
-const aboutTemplate = path.resolve(`./src/templates/aboutUs.js`)
+const aboutTemplate = path.resolve(`./src/templates/about.js`)
 const ratesTemplate = path.resolve(`./src/templates/rates.js`)
 const clientsTemplate = path.resolve(`./src/templates/clients.js`)
 const thanksTemplate = path.resolve(`./src/templates/thank-you.js`)
@@ -119,7 +119,7 @@ exports.createPages = ({ graphql, actions }) => {
                                     return slash(servicesTemplate);
                                   } else if (edge.node.wordpress_id === 11) {
                                     return slash(certsTemplate);
-                                  } else if (edge.node.wordpress_id === 15) {
+                                  } else if (edge.node.wordpress_id === 260) {
                                     return slash(aboutTemplate);
                                   } else if (edge.node.wordpress_id === 37) {
                                     return slash(ratesTemplate);

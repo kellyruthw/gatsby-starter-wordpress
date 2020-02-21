@@ -23,15 +23,13 @@ const RatesPage = (props) => {
                     Thanks! We'll be in touch!
                 </div>
                 <h1>Let's Work Together</h1>
-                <p className="intro-text">
-                    {pageData.acf.rates.copy}
-                </p>
+                <p className="intro-text" dangerouslySetInnerHTML={{ __html: pageData.content}} />
                 <Form />
             </div>
             <div className="sub-message">
-                <h4>{pageData.acf.rates.submessage.headline}</h4>
-                <span><a href={`tel:${pageData.acf.rates.submessage.phone_number}`}>{pageData.acf.rates.submessage.phone_number}</a></span>
-                <span><a href={`mailto:${pageData.acf.rates.submessage.email_address}`}>{pageData.acf.rates.submessage.email_address}</a></span>
+                <h4>Need a quick response? Send Cody a text!</h4>
+                <span><a href="tel:661-992-0517">661-992-0517</a></span>
+                <span><a href="mailto:info@setmedicla.com">info@setmedicla.com</a></span>
             </div>
         </div>
         
@@ -51,15 +49,13 @@ export const ratesQuery = graphql`
             }
             wordpress_id
             title
+            content
             acf {
-                rates {
-                  copy
-                  submessage {
+                submessage {
                     email_address
-                    phone_number
                     headline
+                    phone_number
                   }
-                }
               }
         }
     }
