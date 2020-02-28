@@ -59,8 +59,8 @@ const IndexPage = (props) => {
       <div className="banner">
           <div className="container">
               <div className="copy">
-                <h1><span className="italic-red">los angeles</span>Set Medic &<br />Water Rescue Diver</h1>
-                <p className="introtxt">Set Medic Providing life support and safety supervision
+                <h1><span className="italic-red">los angeles</span>Set Medic &<br />Scuba Safety Diver</h1>
+                <p className="introtxt">Experienced Paramedic providing life support and safety supervision
     for the entertainment industry in Los Angeles and beyond.</p>
                 <Button
                     link="/request-rates"

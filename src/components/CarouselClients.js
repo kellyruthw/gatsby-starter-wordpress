@@ -6,6 +6,9 @@ import logoRupaul from "../assets/images/logo-rupaul.svg"
 import logoViacom from "../assets/images/logo-viacom.svg"
 import logoNike from "../assets/images/logo-nike.png"
 import logoShameless from "../assets/images/logo-shameless.png"
+import logoDisney from "../assets/images/logo-disney.svg"
+import logoMcdonalds from "../assets/images/logo-mcdonalds.svg"
+import logoWarnerBrothers from "../assets/images/logo-warnerbrothers.svg"
  
 class Carousel extends React.Component {
   render() {
@@ -43,6 +46,9 @@ class Carousel extends React.Component {
         <div><img src={logoViacom} alt="Viacom Logo" /></div>
         <div><img src={logoNike} alt="Nike Logo" /></div>
         <div><img src={logoShameless} alt="Shameless Logo" /></div>
+        <div><img src={logoDisney} alt="Disney Logo" /></div>
+        <div><img src={logoMcdonalds} alt="McDonalds Logo" /></div>
+        <div><img src={logoWarnerBrothers} alt="Warner Brothers Logo" /></div>
       </Slider>
     );
   }
